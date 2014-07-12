@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+	<include file="$(find simBotUnicycle)/launch/simBotWgWorld.launch"  />
+	<include file="$(find simBotUnicycle)/launch/simBotMobileBase.launch"  />
+	<node name="Load__map" pkg="global_planner" type="load_map" args="$(find global_planner)/tests/test_maps/topo_map01.jpg" /> 
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find simBotUnicycle)/rviz/robot.vcg" />
+    <include file="$(find simBotTeleop)/launch/simBotTeleopKeyboard.launch" />
+    <include file="$(find simBotDiffDrive)/launch/2d_slam_gmapping.launch" />
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+    <node name="local_path_test" pkg="local_planner" type="local_path_test" />
+    <node name="local_path_node" pkg="local_planner" type="local_path_node" output="screen"/>
+</launch>

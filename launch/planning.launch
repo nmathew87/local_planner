@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+	<include file="$(find simBotDiffDrive)/launch/simBotWgWorld.launch"  />
+    <node name="local_path_test" pkg="local_planner" type="local_path_test" />	
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find simBotDiffDrive)/rviz/robot.vcg" />
+    <include file="$(find simBotTeleop)/launch/simBotTeleopKeyboard.launch" />
+</launch>
+		
